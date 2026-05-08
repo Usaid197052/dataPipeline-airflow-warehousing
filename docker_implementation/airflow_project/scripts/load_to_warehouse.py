@@ -27,11 +27,14 @@ CREATE TABLE IF NOT EXISTS api_data (
 # Insert data
 for index, row in df.iterrows():
     cursor.execute("""
-        INSERT INTO api_data (column1, column2)
-        VALUES (%s, %s)
+        INSERT INTO api_data (userId, id, title, body, title_length)
+        VALUES (%s, %s, %s, %s, %s)
     """, (
-        str(row.iloc[0]),
-        str(row.iloc[1])
+        int(row['userId']),
+        int(row['id']),
+        row['title'],
+        row['body'],
+        int(row['title_length'])
     ))
 
 # Commit changes
