@@ -24,6 +24,7 @@
     <Compile Include="scripts\clean_data.py" />
     <Compile Include="scripts\fetch_api_data.py" />
     <Compile Include="scripts\load_to_mysql.py" />
+    <Compile Include="scripts\load_to_warehouse.py" />
     <Compile Include="scripts\upload_to_s3.py" />
   </ItemGroup>
   <ItemGroup>
@@ -32,7 +33,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="docker-compose.yml" />
-    <Content Include="scripts\cleaned_api_data.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
