@@ -1,12 +1,12 @@
 import pandas as pd
 import psycopg2
 
-# Load cleaned data
+# Load CSV
 df = pd.read_csv("/opt/airflow/data/processed/cleaned_api_data.csv")
 
-# Connect to PostgreSQL warehouse
+# Connect PostgreSQL
 connection = psycopg2.connect(
-    host="host.docker.internal",
+    host="postgres",
     database="warehouse_db",
     user="admin",
     password="admin",
@@ -15,19 +15,23 @@ connection = psycopg2.connect(
 
 cursor = connection.cursor()
 
-# Create analytics table
+# Create table
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS api_data (
-    id SERIAL PRIMARY KEY,
-    column1 TEXT,
-    column2 TEXT
+    userid INTEGER,
+    id INTEGER PRIMARY KEY,
+    title TEXT,
+    body TEXT,
+    title_length INTEGER
 )
 """)
+
+connection.commit()
 
 # Insert data
 for index, row in df.iterrows():
     cursor.execute("""
-        INSERT INTO api_data (userId, id, title, body, title_length)
+        INSERT INTO api_data (userid, id, title, body, title_length)
         VALUES (%s, %s, %s, %s, %s)
     """, (
         int(row['userId']),
@@ -37,11 +41,9 @@ for index, row in df.iterrows():
         int(row['title_length'])
     ))
 
-# Commit changes
 connection.commit()
 
 print("Data loaded into warehouse successfully!")
 
-# Close connections
 cursor.close()
 connection.close()

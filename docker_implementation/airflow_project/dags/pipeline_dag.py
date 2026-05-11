@@ -38,5 +38,10 @@ load_data = BashOperator(
     bash_command='python /opt/airflow/scripts/load_to_mysql.py',
     dag=dag
 )
-fetch_data >> clean_data >> upload_to_s3 >> load_data
+load_to_warehouse = BashOperator(
+    task_id='load_to_warehouse',
+    bash_command='python /opt/airflow/scripts/load_to_warehouse.py',
+    dag=dag
+)
+fetch_data >> clean_data >> upload_to_s3 >> load_data >> load_to_warehouse
 

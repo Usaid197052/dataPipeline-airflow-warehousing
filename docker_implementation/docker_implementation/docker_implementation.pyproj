@@ -36,7 +36,6 @@
     <Folder Include="scripts\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="data\processed\cleaned_api_data.csv" />
     <Content Include="data\raw\api_data.csv" />
     <Content Include="Dockerfile" />
   </ItemGroup>
