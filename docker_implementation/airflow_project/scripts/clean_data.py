@@ -11,7 +11,6 @@ PROJECT_ROOT = os.path.dirname(BASE_DIR)
 
 raw_path = os.path.join(PROJECT_ROOT, "data", "raw", "api_data.csv")
 processed_path = os.path.join(PROJECT_ROOT, "data", "processed", "cleaned_api_data.csv")
-
 df = pd.read_csv(raw_path)
 
 print("Data loaded.")
