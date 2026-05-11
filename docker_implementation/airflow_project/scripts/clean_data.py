@@ -4,7 +4,7 @@ import os
 print("Starting data cleaning...")
 
 # ---------------------------
-# PATH SETUP (DYNAMIC)
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(BASE_DIR)
