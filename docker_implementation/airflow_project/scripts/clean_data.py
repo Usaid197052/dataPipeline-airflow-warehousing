@@ -25,7 +25,7 @@ print("Data loaded.")
 df.drop_duplicates(inplace=True)
 df.fillna("N/A", inplace=True)
 
-# ---------------------------
+
 
 df['title_length'] = df['title'].apply(len)
 
