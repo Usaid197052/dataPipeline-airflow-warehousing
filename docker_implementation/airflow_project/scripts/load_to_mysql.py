@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS api_data (
 )
 """)
 
-
+# Clear old data
 cursor.execute("TRUNCATE TABLE api_data")
 
 # ---------------------------
