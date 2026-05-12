@@ -30,7 +30,7 @@ df = pd.read_csv(processed_path)
 
 print("Data loaded.")
 
-
+# ---------------------------
 # CREATE TABLE
 # ---------------------------
 cursor.execute("""
