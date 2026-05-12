@@ -5,7 +5,7 @@ import os
 print("Starting MySQL load...")
 
 # ---------------------------
-# DATABASE CONFIG
+
 
 connection = pymysql.connect(
     host="host.docker.internal",
