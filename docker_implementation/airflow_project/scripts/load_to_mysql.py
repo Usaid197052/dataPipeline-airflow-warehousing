@@ -32,7 +32,7 @@ print("Data loaded.")
 
 
 
-
+# ---------------------------
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS api_data (
     userId INT,
