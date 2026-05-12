@@ -4,7 +4,7 @@ import os
 
 print("Starting MySQL load...")
 
-# ---------------------------
+
 
 
 connection = pymysql.connect(
