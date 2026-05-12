@@ -31,7 +31,7 @@ df = pd.read_csv(processed_path)
 print("Data loaded.")
 
 
-
+\
 # ---------------------------
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS api_data (
