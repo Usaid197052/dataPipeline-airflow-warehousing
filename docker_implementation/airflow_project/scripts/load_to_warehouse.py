@@ -1,7 +1,7 @@
 import pandas as pd
 import psycopg2
 
-# Load CSV
+
 df = pd.read_csv("/opt/airflow/data/processed/cleaned_api_data.csv")
 
 
