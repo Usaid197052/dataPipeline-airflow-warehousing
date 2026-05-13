@@ -14,8 +14,6 @@ connection = psycopg2.connect(
 )
 
 cursor = connection.cursor()
-
-
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS api_data (
     userid INTEGER,
