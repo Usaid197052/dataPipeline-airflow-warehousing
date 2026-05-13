@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS api_data (
 
 connection.commit()
 
-
+# Insert data
 for index, row in df.iterrows():
     cursor.execute("""
         INSERT INTO api_data (userid, id, title, body, title_length)
