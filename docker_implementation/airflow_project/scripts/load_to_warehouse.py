@@ -4,7 +4,7 @@ import psycopg2
 # Load CSV
 df = pd.read_csv("/opt/airflow/data/processed/cleaned_api_data.csv")
 
-# Connect PostgreSQL
+
 connection = psycopg2.connect(
     host="postgres",
     database="warehouse_db",
