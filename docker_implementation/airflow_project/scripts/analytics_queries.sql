@@ -10,7 +10,7 @@ FROM api_data
 ORDER BY title_length DESC
 LIMIT 5;
 
--- Posts per user
+
 SELECT userid, COUNT(*) AS total_posts
 FROM api_data
 GROUP BY userid
