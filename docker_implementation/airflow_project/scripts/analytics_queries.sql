@@ -1,6 +1,7 @@
 
 SELECT COUNT(*) FROM api_data;
 
+
 SELECT AVG(title_length) FROM api_data;
 SELECT title, title_length
 FROM api_data
