@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a1c595a0-96e4-4831-a9fb-c2622f895b04</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>scripts\upload_to_s3.py</StartupFile>
+    <StartupFile>dags\pipeline_dag.py</StartupFile>
     <SearchPath>scripts</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
