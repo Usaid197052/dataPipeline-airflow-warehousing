@@ -1,7 +1,7 @@
 
 SELECT COUNT(*) FROM api_data;
 
--- Average title length
+
 SELECT AVG(title_length) FROM api_data;
 
 -- Longest titles
