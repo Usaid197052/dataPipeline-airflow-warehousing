@@ -1,4 +1,4 @@
-
+-- Total records
 SELECT COUNT(*) FROM api_data;
 
 -- Average title length
